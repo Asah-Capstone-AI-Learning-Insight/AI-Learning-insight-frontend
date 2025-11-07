@@ -1,0 +1,98 @@
+* {
+  font-family: 'Quicksand';
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ededee;
+}
+
+.top-navigation {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  box-shadow: 0px 3px 2px -1px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  background-color: white;
+}
+
+.top-navigation .dicoding-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.top-navigation .dicoding-logo img {
+  height: 32px;
+}
+
+.user-list ul {
+  display: flex;
+  padding-right: 60px;
+}
+
+.user-list li {
+  list-style: none;
+  padding: 15px;
+}
+.navigation-list ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation-list li {
+  list-style: none;
+  font-size: 16px;
+}
+
+.nav-menu {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-left: 16px;
+}
+
+.side-nav {
+  margin-top: 70px;
+  position: fixed;
+  z-index: 10;
+  min-width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5px 0px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav .academy-container {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  background-image: url('../../public/images/dashboard-academy-illustration.png');
+  background-repeat: no-repeat;
+  background-size: 108px;
+  background-position: right bottom;
+}
+
+.side-nav .academy-container span {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 24px;
+  color: #2d3e50;
+}
+
+.learn-activity {
+  height: 73px;
+  display: flex;
+  align-items: center;
+  background-color: #ededee;
+  padding: 24px;
+  gap: 10px;
+}
