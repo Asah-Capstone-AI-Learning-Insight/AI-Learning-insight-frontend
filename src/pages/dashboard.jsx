@@ -1,5 +1,5 @@
 import { SideNavigation } from '../components/SideNavigation';
-import { InsightContainer } from '../components/InsightContainer';
+import { MainContainer } from '../components/MainContainer';
 
 import NavigationList from '../components/NavigationList';
 import UserNavigation from '../components/UserNavigation';
@@ -15,7 +15,7 @@ function Dashboard() {
           <UserNavigation />
         </div>
         <SideNavigation />
-        <InsightContainer />
+        <MainContainer />
       </div>
     </>
   );
