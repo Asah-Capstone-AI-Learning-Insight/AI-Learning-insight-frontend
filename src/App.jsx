@@ -1,10 +1,9 @@
-import { TopNavigation } from './components/TopNavigation';
-import { SideNavigation } from './components/SideNavigation';
+import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
     <>
-      <TopNavigation />
-      <SideNavigation />
+      <Dashboard />
     </>
   );
 }
