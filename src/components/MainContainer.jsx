@@ -1,9 +1,10 @@
 import React from 'react';
+import { InsightContainer } from './InsightContainer';
 
 export function MainContainer() {
   return (
-    <div className="insight-container">
-      <h1>Aktivitas Belajar</h1>
+    <div className="main-container">
+      <InsightContainer />
     </div>
   );
 }

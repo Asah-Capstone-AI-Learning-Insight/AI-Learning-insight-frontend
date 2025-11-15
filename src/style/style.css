@@ -213,11 +213,90 @@ body {
   z-index: 10;
 }
 
-.insight-container {
+.main-container {
   grid-area: main;
   padding: 40px;
 }
 
 .dicoding-logo img {
   height: 32px;
+}
+
+.insight-container {
+  width: 100%;
+  border: 1px solid #f2f4f7;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.insight-header {
+  background-color: #f2f4f7;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.insight-header span {
+  display: flex;
+  align-items: center;
+}
+
+.insight-header span h2 {
+  padding-left: 10px;
+}
+
+.insight-header span .header-icon {
+  font-size: 1.5rem;
+}
+
+.insight-main {
+  padding: 20px 30px;
+}
+
+.insight-details {
+  width: 40%;
+}
+
+.insight-summaries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.insight-summaries h1 {
+  font-size: 2.5rem;
+}
+
+.insight-summaries p {
+  color: #71717a;
+}
+
+.achievement-progress {
+  display: flex;
+  gap: 10rem;
+  margin-top: 20px;
+}
+
+.completed-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.completed-courses span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.completed-courses h3 {
+  color: #71717a;
+}
+
+.completed-courses span .cap-icon,
+h1 {
+  font-size: 1.5rem;
 }

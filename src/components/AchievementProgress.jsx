@@ -1,0 +1,24 @@
+import React from 'react';
+import { RiGraduationCapLine } from 'react-icons/ri';
+import { FaRegClock } from 'react-icons/fa';
+
+export function AchievementProgress() {
+  return (
+    <div className="achievement-progress">
+      <div className="completed-courses">
+        <h3>Courses</h3>
+        <span>
+          <RiGraduationCapLine className="cap-icon" />
+          <h1>20</h1>
+        </span>
+      </div>
+      <div className="completed-courses">
+        <h3>Learning Hours</h3>
+        <span>
+          <FaRegClock className="cap-icon" />
+          <h1>20</h1>
+        </span>
+      </div>
+    </div>
+  );
+}
