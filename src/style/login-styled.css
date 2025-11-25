@@ -1,0 +1,76 @@
+/* ====== Layout utama ====== */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 180px;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ====== Card ====== */
+.login-card {
+  width: 420px;
+  text-align: left;
+}
+
+/* ====== Judul ====== */
+.login-card .title {
+  color: #3d3d3d;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.login-card .subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* ====== Form ====== */
+.login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-input input {
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.login-input input:focus {
+  outline: none;
+  border-color: #4b5563;
+}
+
+/* ====== Tombol Login ====== */
+.login-input button {
+  background: #2d3e50; /* warna biru gelap */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: opacity .2s;
+}
+
+.login-input button:hover {
+  background-color: #1f2b38;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+  }
+}
