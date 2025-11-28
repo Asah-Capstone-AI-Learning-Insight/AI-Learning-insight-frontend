@@ -7,7 +7,8 @@ import '../style/login-styled.css';
 function LoginPage() {
   const navigate = useNavigate();
 
-  async function onLogin({ email, password }) {
+  // async function onLogin({ email, password }) {
+  async function onLogin() {
     // const { error, data } = await login({ email, password });
     navigate('/');
 
@@ -23,7 +24,6 @@ function LoginPage() {
         <h2 className="title">Masuk</h2>
 
         <LoginInput login={onLogin} />
-
       </div>
     </section>
   );

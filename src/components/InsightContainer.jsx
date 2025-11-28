@@ -1,8 +1,8 @@
-import React from "react";
-import { FaCalendarCheck } from "react-icons/fa";
+import React from 'react';
+import { FaCalendarCheck } from 'react-icons/fa';
 
-import { InsightDetails } from "./InsightDetails";
-import { ActivitiesTracker } from "./ActivitiesTracker";
+import { InsightDetails } from './InsightDetails';
+import { ActivitiesTracker } from './ActivitiesTracker';
 
 export function InsightContainer() {
   return (
@@ -14,6 +14,7 @@ export function InsightContainer() {
         </span>
         <p>Lorem Ipsum dolor sit amet</p>
       </div>
+      <hr />
       <div className="insight-main">
         <InsightDetails />
         <ActivitiesTracker />
