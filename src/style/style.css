@@ -332,11 +332,21 @@ h1 {
   align-items: center;
   font-weight: 200;
 }
-.activities-head span .percentage {
+
+.up-percentage {
   padding-left: 0.5rem;
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   color: #10b981;
+}
+
+.down-percentage {
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ca0b0b;
 }
 
 .activities-container {

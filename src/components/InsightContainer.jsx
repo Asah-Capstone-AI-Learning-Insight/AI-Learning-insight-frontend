@@ -4,7 +4,7 @@ import { FaCalendarCheck } from 'react-icons/fa';
 import { InsightDetails } from './InsightDetails';
 import { ActivitiesTracker } from './ActivitiesTracker';
 
-export function InsightContainer() {
+export function InsightContainer({ insight }) {
   return (
     <div className="insight-container">
       <div className="insight-header">
@@ -16,7 +16,7 @@ export function InsightContainer() {
       </div>
       <hr />
       <div className="insight-main">
-        <InsightDetails />
+        <InsightDetails key={insight} />
         <ActivitiesTracker />
       </div>
     </div>
