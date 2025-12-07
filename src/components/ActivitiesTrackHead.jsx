@@ -22,7 +22,7 @@ export function ActivitiesTrackHead() {
             {(
               ((latestMinute - beforeLatestMinute) / beforeLatestMinute) *
               100
-            ).toFixed(2)}
+            ).toFixed()}
             %
           </h2>
         </div>
@@ -35,7 +35,7 @@ export function ActivitiesTrackHead() {
             {(
               ((beforeLatestMinute - latestMinute) / latestMinute) *
               100
-            ).toFixed(2)}
+            ).toFixed()}
             %
           </h2>
         </div>
