@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://localhost:3000';
 
 function getAccessToken() {
   return localStorage.getItem('accessToken');
@@ -13,18 +13,18 @@ async function fetchWithToken(url, options = {}) {
     ...options,
     headers: {
       ...options.headers,
-      Authorization: `Bearer ${getAccessToken()}`
-    }
+      Authorization: `Bearer ${getAccessToken()}`,
+    },
   });
 }
 
-async function login({ email, password }) {
-  const response = await fetch(`${BASE_URL}/login`, {
+async function login({ username, password }) {
+  const response = await fetch(`${BASE_URL}/authentications`, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ username, password }),
   });
 
   const responseJson = await response.json();
@@ -48,9 +48,13 @@ async function getUserLogged() {
   return { error: false, data: responseJson.data };
 }
 
-export {
-    getAccessToken,
-    putAccessToken,
-    login,
-    getUserLogged,
+function logout() {
+  localStorage.removeItem('accessToken');
+  return true;
 }
+
+// async function getData() {
+//   const response = await fetchWithToken(`${BASE_URL}/`);
+// }
+
+export { getAccessToken, putAccessToken, login, getUserLogged, logout };

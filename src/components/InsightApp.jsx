@@ -7,17 +7,15 @@ import ProtectedRoute from '../routes/ProtectedRoute';
 function InsightApp() {
   return (
     <Routes>
-      {/* Protected Route */}
       <Route
         path="/"
         element={
-          // <ProtectedRoute>
-          <Dashboard />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
         }
       />
 
-      {/* Public Route */}
       <Route path="/login" element={<LoginPage />} />
     </Routes>
   );

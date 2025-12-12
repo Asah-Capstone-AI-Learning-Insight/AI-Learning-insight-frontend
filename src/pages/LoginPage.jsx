@@ -1,21 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoginInput from '../components/LoginInput';
-// import { login, putAccessToken } from '../utils/api';
+import { login, putAccessToken } from '../utils/api';
 import '../style/login-styled.css';
 
 function LoginPage() {
   const navigate = useNavigate();
 
-  // async function onLogin({ email, password }) {
-  async function onLogin() {
-    // const { error, data } = await login({ email, password });
-    navigate('/');
+  async function onLogin({ email, password }) {
+    const { error, data } = await login({ username: email, password });
 
-    // if (!error) {
-    //   putAccessToken(data.accessToken);
-    //   navigate('/');
-    // }
+    if (!error) {
+      putAccessToken(data.accessToken);
+      navigate('/');
+    }
   }
 
   return (

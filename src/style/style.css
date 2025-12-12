@@ -145,14 +145,75 @@ body {
   padding-left: 16px;
 }
 
+.user-list {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .user-list ul {
   display: flex;
   padding-right: 60px;
+  align-items: center;
+  gap: 1rem;
 }
 
 .user-list li {
   list-style: none;
   padding: 15px;
+}
+
+.photo {
+  width: 30px;
+  border-radius: 50%;
+  outline-style: solid;
+  outline-color: aqua;
+  outline-offset: 3px;
+  outline-width: 2px;
+}
+
+.notification {
+  font-size: 30px;
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 3.8rem;
+  right: 9rem;
+  background-color: white;
+  border-radius: 5px;
+  width: 11rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border: solid 0.5px #dfdfdf;
+  box-shadow: 5px 0px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.slide {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.logout-menu button {
+  display: flex;
+  color: red;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
 }
 
 .navigation-list ul {
