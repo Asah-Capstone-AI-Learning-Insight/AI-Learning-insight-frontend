@@ -53,8 +53,24 @@ function logout() {
   return true;
 }
 
-// async function getData() {
-//   const response = await fetchWithToken(`${BASE_URL}/`);
-// }
+async function getInsight(id) {
+  const response = await fetchWithToken(
+    `${BASE_URL}/api/insight/weekly-insight/${id}`
+  );
+  const responseJson = await response.json();
 
-export { getAccessToken, putAccessToken, login, getUserLogged, logout };
+  if (responseJson.status !== 'success') {
+    return { error: true, data: [] };
+  }
+
+  return { error: false, data: responseJson.data };
+}
+
+export {
+  getAccessToken,
+  putAccessToken,
+  login,
+  getUserLogged,
+  logout,
+  getInsight,
+};

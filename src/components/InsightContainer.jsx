@@ -16,7 +16,7 @@ export function InsightContainer({ insight }) {
       </div>
       <hr />
       <div className="insight-main">
-        <InsightDetails key={insight} />
+        <InsightDetails insight={insight} />
         <ActivitiesTracker />
       </div>
     </div>

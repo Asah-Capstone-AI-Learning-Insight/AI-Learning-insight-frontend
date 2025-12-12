@@ -1,10 +1,10 @@
 import React from 'react';
 import { InsightContainer } from './InsightContainer';
 
-export function MainContainer() {
+export function MainContainer({ insight }) {
   return (
     <div className="main-container">
-      <InsightContainer />
+      <InsightContainer insight={insight} />
     </div>
   );
 }

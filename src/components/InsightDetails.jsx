@@ -9,15 +9,17 @@ export function InsightDetails({
   insightAction,
   completedCourse,
   totalLearningHours,
+  insight,
 }) {
   return (
     <>
       <div className="insight-details">
         <InsightSummaries
-        // labels={insightLabels}
-        // categories={insightCategories}
-        // summaries={insightSummaries}
-        // action={insightAction}
+          insight={insight}
+          // labels={insightLabels}
+          // categories={insightCategories}
+          // summaries={insightSummaries}
+          // action={insightAction}
         />
         <AchievementProgress
         // completedCourse={completedCourse}
