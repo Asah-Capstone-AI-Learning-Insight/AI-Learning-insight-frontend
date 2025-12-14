@@ -1,6 +1,6 @@
-import React from 'react';
-import { InsightSummaries } from './InsightSummaries';
-import { AchievementProgress } from './AchievementProgress';
+import React from "react";
+import { InsightSummaries } from "./InsightSummaries";
+import { AchievementProgress } from "./AchievementProgress";
 
 export function InsightDetails({
   insightLabels,
@@ -10,6 +10,7 @@ export function InsightDetails({
   completedCourse,
   totalLearningHours,
   insight,
+  summary,
 }) {
   return (
     <>
@@ -22,8 +23,9 @@ export function InsightDetails({
           // action={insightAction}
         />
         <AchievementProgress
-        // completedCourse={completedCourse}
-        // totalLearningHours={totalLearningHours}
+          summary={summary}
+          // completedCourse={completedCourse}
+          // totalLearningHours={totalLearningHours}
         />
       </div>
     </>

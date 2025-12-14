@@ -1,54 +1,27 @@
-import React from 'react';
-import { FaCircleArrowUp, FaCircleArrowDown } from 'react-icons/fa6';
-import chartData from '../utils/data';
+import React from "react";
+import { FaCircleArrowUp, FaCircleArrowDown } from "react-icons/fa6";
 
-export function ActivitiesTrackHead() {
-  const dataArray = chartData.datasets[0].data;
+import { calcPercentChange } from "../utils/metrics";
 
-  const lastIndex = dataArray.length - 1;
+export function ActivitiesTrackHead({ summary }) {
+  const series = summary?.minutesSeries ?? [];
 
-  const beforeIndex = dataArray.length - 2;
+  const todayMinutes = Number(series.at(-1) ?? 0);
+  const yesterdayMinutes = Number(series.at(-2) ?? 0);
 
-  const latestMinute = dataArray[lastIndex];
+  const diff = calcPercentChange(todayMinutes, yesterdayMinutes);
 
-  const beforeLatestMinute = dataArray[beforeIndex];
-
-  const increaseValue = () => {
-    if (latestMinute > beforeLatestMinute) {
-      return (
-        <div className="up-percentage">
-          <FaCircleArrowUp />
-          <h2>
-            {(
-              ((latestMinute - beforeLatestMinute) / beforeLatestMinute) *
-              100
-            ).toFixed()}
-            %
-          </h2>
-        </div>
-      );
-    } else {
-      return (
-        <div className="down-percentage">
-          <FaCircleArrowDown />
-          <h2>
-            {(
-              ((beforeLatestMinute - latestMinute) / latestMinute) *
-              100
-            ).toFixed()}
-            %
-          </h2>
-        </div>
-      );
-    }
-  };
-
+  const trendClass = diff.isUp ? "trend-up" : diff.isDown ? "trend-down" : "";
+  const TrendIcon = diff.isUp ? FaCircleArrowUp : FaCircleArrowDown;
   return (
     <>
       <div className="activities-head">
         <span>
-          <h1>{latestMinute} Menit</h1>
-          <span>{increaseValue()}</span>
+          <h1>{todayMinutes} Menit</h1>
+          <span className={trendClass}>
+            {!diff.isSame && <TrendIcon />}
+            {diff.percentText}
+          </span>
         </span>
         <p>Perbandingan dengan hari sebelumnya</p>
       </div>

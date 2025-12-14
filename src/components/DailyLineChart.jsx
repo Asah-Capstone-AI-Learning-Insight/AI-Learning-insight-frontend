@@ -20,12 +20,23 @@ ChartJs.register(
   Legend
 );
 
-export function DailyLineChart() {
+export function DailyLineChart({ labels, data }) {
   const options = {};
 
   return (
     <>
-      <Line options={options} data={chartData} />
+      <Line
+        options={options}
+        data={{
+          labels,
+          datasets: [
+            {
+              label: "Minutes",
+              data,
+            },
+          ],
+        }}
+      />
     </>
   );
 }

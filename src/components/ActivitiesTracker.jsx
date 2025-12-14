@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import { DailyLineChart } from './DailyLineChart';
-import { ActivitiesTrackHead } from './ActivitiesTrackHead';
+import { DailyLineChart } from "./DailyLineChart";
+import { ActivitiesTrackHead } from "./ActivitiesTrackHead";
 
-export function ActivitiesTracker(minute) {
+export function ActivitiesTracker({ minute, summary }) {
   return (
     <>
       <div className="activities-container">
-        <ActivitiesTrackHead minute={minute} />
-        <DailyLineChart />
+        <ActivitiesTrackHead summary={summary} />
+        <DailyLineChart
+          labels={summary?.labels ?? []}
+          data={summary?.minutesSeries ?? []}
+        />
       </div>
     </>
   );

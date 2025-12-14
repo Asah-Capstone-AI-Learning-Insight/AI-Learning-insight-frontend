@@ -1,10 +1,14 @@
-import React from 'react';
-import { InsightContainer } from './InsightContainer';
+import React from "react";
+import { InsightContainer } from "./InsightContainer";
 
-export function MainContainer({ insight }) {
+export function MainContainer({ insight, errorMsg, summary }) {
   return (
     <div className="main-container">
-      <InsightContainer insight={insight} />
+      {errorMsg ? (
+        <div style={{ padding: 12, color: "red" }}>{errorMsg}</div>
+      ) : (
+        <InsightContainer insight={insight} summary={summary} />
+      )}
     </div>
   );
 }

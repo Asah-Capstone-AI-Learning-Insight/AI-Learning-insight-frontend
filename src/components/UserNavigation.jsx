@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import { CgBell } from 'react-icons/cg';
-import { PiBellSimple } from 'react-icons/pi';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import { DropDownMenu } from './DropdownMenu';
+import { PiBellSimple } from "react-icons/pi";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { DropDownMenu } from "./DropdownMenu";
 
-function UserNavigation() {
+import { getInitials } from "../utils/avatar";
+
+function UserNavigation({ displayName }) {
+  const avatarUrl = getInitials(displayName, { size: 40, rounded: true });
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,7 +27,7 @@ function UserNavigation() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img src="../../public/images/default.jpg" alt="" className="photo" />
+          <img src={avatarUrl} alt="" className="photo" />
           {isDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
           <DropDownMenu isVisible={isDropdownOpen} />
         </li>

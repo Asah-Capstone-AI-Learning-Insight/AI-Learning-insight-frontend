@@ -1,10 +1,10 @@
-import React from 'react';
-import { FaCalendarCheck } from 'react-icons/fa';
+import React from "react";
+import { FaCalendarCheck } from "react-icons/fa";
 
-import { InsightDetails } from './InsightDetails';
-import { ActivitiesTracker } from './ActivitiesTracker';
+import { InsightDetails } from "./InsightDetails";
+import { ActivitiesTracker } from "./ActivitiesTracker";
 
-export function InsightContainer({ insight }) {
+export function InsightContainer({ insight, summary }) {
   return (
     <div className="insight-container">
       <div className="insight-header">
@@ -16,8 +16,8 @@ export function InsightContainer({ insight }) {
       </div>
       <hr />
       <div className="insight-main">
-        <InsightDetails insight={insight} />
-        <ActivitiesTracker />
+        <InsightDetails insight={insight} summary={summary} />
+        <ActivitiesTracker summary={summary} />
       </div>
     </div>
   );
