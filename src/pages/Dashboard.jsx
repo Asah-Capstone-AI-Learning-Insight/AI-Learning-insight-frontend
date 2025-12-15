@@ -43,7 +43,7 @@ function Dashboard() {
     <>
       <div className="dashboard-container">
         <div className="dicoding-logo">
-          <img src="../../public/images/dicoding.png" alt="" />
+          <img src="/images/dicoding.png" alt="" />
         </div>
 
         <div className="nav-menu">
@@ -63,3 +63,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
