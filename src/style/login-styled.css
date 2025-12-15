@@ -1,18 +1,48 @@
 /* ====== Layout utama ====== */
+* {
+  box-sizing: border-box;
+}
 .login-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 180px;
-  background: #ffffff;
-  font-family: 'Inter', sans-serif;
+  align-items: center;
+  justify-content: end;
+
+  background: blue;
+
+  font-family: "Inter", sans-serif;
+  background-image: url(../../public/images/workspace.jpg);
+  background-repeat: no-repeat;
+}
+
+.login-card-container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 5rem;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 180px;
+  box-shadow: -8px 0 15px -5px rgba(0, 0, 0, 0.75);
+}
+
+.photo-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.photo-container img {
+  height: 3rem;
 }
 
 /* ====== Card ====== */
 .login-card {
   width: 420px;
   text-align: left;
+  padding: 2rem 1rem;
 }
 
 /* ====== Judul ====== */
@@ -52,7 +82,7 @@
 
 /* ====== Tombol Login ====== */
 .login-input button {
-  background: #2d3e50; /* warna biru gelap */
+  background: #2d3e50;
   color: white;
   border: none;
   padding: 12px;
@@ -61,7 +91,7 @@
   font-weight: 700;
   cursor: pointer;
   margin-top: 6px;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .login-input button:hover {

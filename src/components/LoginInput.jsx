@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import PropTypes from 'prop-types';
 
 class LoginInput extends React.Component {
@@ -6,8 +6,8 @@ class LoginInput extends React.Component {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     };
 
     this.onEmailChangeHandler = this.onEmailChangeHandler.bind(this);
@@ -46,7 +46,7 @@ class LoginInput extends React.Component {
         <input
           className="form-email"
           type="text"
-          placeholder="Email"
+          placeholder="Username"
           value={this.state.email}
           onChange={this.onEmailChangeHandler}
         />

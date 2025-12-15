@@ -1,8 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import LoginInput from '../components/LoginInput';
-import { login, putAccessToken } from '../utils/api';
-import '../style/login-styled.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import LoginInput from "../components/LoginInput";
+import { login, putAccessToken } from "../utils/api";
+import "../style/login-styled.css";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -12,16 +12,22 @@ function LoginPage() {
 
     if (!error) {
       putAccessToken(data.accessToken);
-      navigate('/');
+      navigate("/");
     }
   }
 
   return (
     <section className="login-container">
-      <div className="login-card">
-        <h2 className="title">Masuk</h2>
+      <div className="login-card-container">
+        <div className="photo-container">
+          <img src="../../public/images/dicoding.png" alt="" />
+          <img src="../../public/images/learning-genie.png" alt="makan" />
+        </div>
+        <div className="login-card">
+          <h2 className="title">Masuk</h2>
 
-        <LoginInput login={onLogin} />
+          <LoginInput login={onLogin} />
+        </div>
       </div>
     </section>
   );
