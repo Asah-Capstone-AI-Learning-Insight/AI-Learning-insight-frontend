@@ -1,4 +1,4 @@
-const BASE_URL = "http://202.10.34.29";
+const BASE_URL = "https://capstone.fariqsutikno.my.id";
 
 function getAccessToken() {
   return localStorage.getItem("accessToken");
@@ -133,3 +133,4 @@ export {
   getDashboardSummary,
   getUserLearningInsight,
 };
+
