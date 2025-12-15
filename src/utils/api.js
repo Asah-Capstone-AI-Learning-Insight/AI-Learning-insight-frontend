@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://202.10.34.29";
 
 function getAccessToken() {
   return localStorage.getItem("accessToken");
