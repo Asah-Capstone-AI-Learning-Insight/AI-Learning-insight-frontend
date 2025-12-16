@@ -21,7 +21,7 @@ function LoginPage() {
       <div className="login-card-container">
         <div className="photo-container">
           <img src="/images/dicoding.png" alt="Logo Dicoding" />
-          <img src="/public/images/learning-genie.png" alt="Logo LG" />
+          <img src="/images/learning-genie.png" alt="Logo LG" />
         </div>
         <div className="login-card">
           <h2 className="title">Masuk</h2>
@@ -34,4 +34,5 @@ function LoginPage() {
 }
 
 export default LoginPage;
+
 
